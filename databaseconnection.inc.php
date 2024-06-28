@@ -6,6 +6,6 @@ $dbpassword= " ";
 try {
     $pdo=new PDO($dsn,$dbusername,$dbpassword);
     $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-} catch (PDO Exception $e) {
+} catch (PDOException $e) {
     echo"Connection failed: ".$e -> getMessage();
 }
